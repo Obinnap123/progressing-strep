@@ -21,6 +21,7 @@ body {
       height: 40px;
       border-radius: 50%;
       border: 3px solid rgba(128, 128, 128, 0.265);
+      position: relative;
       &.active {
         border-color: rgba(0, 0, 255, 0.482);
       }
@@ -30,6 +31,10 @@ body {
         align-items: center;
         text-align: center;
         padding: 7px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
     .line {

@@ -9,6 +9,7 @@ next.addEventListener("click", () => {
   toggleNextElement(".line:not(.active)", "add");
   prev.classList.add("active");
   updatePrevButtonState();
+  updateNextButtonState();
 });
 
 // Previous button event listener
@@ -16,6 +17,7 @@ prev.addEventListener("click", () => {
   toggleLastActiveElement(".circle.active", "remove");
   toggleLastActiveElement(".line.active", "remove");
   updatePrevButtonState();
+  updateNextButtonState();
 });
 
 function toggleNextElement(selector, action) {
@@ -38,4 +40,9 @@ function updatePrevButtonState() {
 
   prev.disabled = isFirstCircleOnlyActive;
   prev.classList.toggle("active", !isFirstCircleOnlyActive);
+}
+function updateNextButtonState() {
+  const isLastCircleActive = circles[3].classList.contains("active");
+  next.disabled = isLastCircleActive;
+  next.classList.toggle("active", !isLastCircleActive);
 }
