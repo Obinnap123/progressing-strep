@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+}
+
+.overall {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgba(128, 128, 128, 0.265);
+}
+
+.circle.active {
+  border-color: rgba(0, 0, 255, 0.482);
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 7px;
+}
+
+.line {
+  width: 70px;
+  height: 3px;
+  background-color: rgba(128, 128, 128, 0.265);
+}
+
+.line.active {
+  background-color: rgba(0, 0, 255, 0.482);
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  gap: 15px;
+}
+
+.prev, .next {
+  width: 20%;
+  height: 20%;
+  padding: 7px;
+  border: 1px solid rgba(128, 128, 128, 0.265);
+  background-color: rgba(128, 128, 128, 0.18);
+  border-radius: 6px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.next.active {
+  background-color: rgba(0, 0, 255, 0.482);
+}
+
+.prev.active {
+  background-color: rgba(0, 0, 255, 0.482);
+}/*# sourceMappingURL=global.css.map */
